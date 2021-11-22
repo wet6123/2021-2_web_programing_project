@@ -1,27 +1,22 @@
-const navbarMenu1 = document.querySelector(".navbar__menu__1");
-const navbarMenu2 = document.querySelector(".navbar__menu__2");
-const navbarMenu3 = document.querySelector(".navbar__menu__3");
-const navbarMenu4 = document.querySelector(".navbar__menu__4");
-const navbarMenu5 = document.querySelector(".navbar__menu__5");
+const navbarMenuSubs = document.querySelectorAll(".navbar__menu__sub");
 const lnb = document.querySelector(".lnb");
-const lnbHide = document.querySelector(".lnb__hide");
 
-navbarMenu1.addEventListener("mouseenter", () => {
-  navbarMenu1.setAttribute("id", "navbar__menu__hover");
+for (const navbarMenuSub of navbarMenuSubs) {
+  navbarMenuSub.addEventListener("mouseover", () => {
+    navbarMenuSub.setAttribute("id", "navbar__menu__hover");
+    lnb.classList.add("active");
+  });
+
+  navbarMenuSub.addEventListener("mouseleave", () => {
+    navbarMenuSub.removeAttribute("id");
+    lnb.classList.remove("active");
+  });
+}
+
+lnb.addEventListener("mouseenter", () => {
   lnb.classList.add("active");
 });
 
-navbarMenu2.addEventListener("mouseenter", () => {
-  navbarMenu2.setAttribute("id", "navbar__menu__hover");
-  lnb.classList.add("active");
-});
-
-navbarMenu1.addEventListener("mouseleave", () => {
-  navbarMenu1.removeAttribute("id");
-  lnb.classList.remove("active");
-});
-
-navbarMenu2.addEventListener("mouseleave", () => {
-  navbarMenu2.removeAttribute("id");
+lnb.addEventListener("mouseleave", () => {
   lnb.classList.remove("active");
 });
