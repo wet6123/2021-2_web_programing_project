@@ -1,7 +1,9 @@
 :root {
   --text-color: white;
+  --sub-text-color: #263343;
   --background-color: #263343;
-  --logo-color: tomato;
+  --logo-color: #f9f3df;
+  --sub-menu-line: #435974;
 }
 
 body {
@@ -45,6 +47,7 @@ a {
 }
 
 .navbar__menu > li {
+  font-size: 17px;
   text-align: center;
   width: 108px;
   padding: 18px 0px;
@@ -59,7 +62,7 @@ a {
   list-style: none;
   color: var(--text-color);
   display: flex;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .navbar__icon > li {
@@ -95,8 +98,14 @@ a {
 
 .lnb li {
   list-style: none;
-  border-bottom: 1px solid var(--background-color);
+  border-bottom: 1px solid var(--sub-menu-line);
+
+  padding: 8px 0px;
   width: 150px;
+}
+
+.lnb li a {
+  color: var(--sub-text-color);
 }
 
 .lnb li:last-child {
