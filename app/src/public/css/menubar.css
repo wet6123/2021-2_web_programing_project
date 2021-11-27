@@ -2,7 +2,7 @@
   --text-color: white;
   --sub-text-color: #263343;
   --background-color: #263343;
-  --logo-color: #f9f3df;
+  --logo-color: #f6efc3;
   --sub-menu-line: #435974;
 }
 
@@ -29,6 +29,7 @@ a {
 
 .navbar__logo {
   font-size: 24px;
+  white-space: nowrap; /*줄바꿈 막기*/
 }
 
 .navbar__logo i {
@@ -85,7 +86,7 @@ a {
 }
 
 .lnb ul:first-child {
-  margin: 0px 0px 0px 91.38px;
+  margin: 0px 0px 0px 95.69px;
 }
 
 .lnb ul {
