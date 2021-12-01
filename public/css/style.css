@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"); /* 구글 폰트*/
 @import "menubar.css";
+@import "slide.css";
 
 a {
   font-family: "Noto Sans KR", sans-serif; /*구글 폰트*/
