@@ -5,3 +5,7 @@
 a {
   font-family: "Noto Sans KR", sans-serif; /*구글 폰트*/
 }
+
+body {
+  margin-top: 75px;
+}

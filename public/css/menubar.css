@@ -6,8 +6,13 @@
   --sub-menu-line: #435974;
 }
 
-body {
+header {
   margin: 0;
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 a {
