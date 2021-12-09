@@ -15,7 +15,7 @@ header {
   right: 0;
 }
 
-a {
+header a {
   text-decoration: none;
   color: var(--text-color);
 }
