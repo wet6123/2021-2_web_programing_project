@@ -2,6 +2,7 @@
   --text-highlight-color: #153d73;
   --border-color: #ccc;
   --border-highlight-color: rgb(57, 113, 170);
+  --cell-highlight-color: rgb(214, 238, 253);
 }
 
 hr {
@@ -17,6 +18,7 @@ h2 {
 /* 테이블 */
 
 table {
+  width: 1080px;
   border-collapse: collapse;
   text-align: left;
   line-height: 1.5;
@@ -59,4 +61,30 @@ table ul {
 
 .list {
   list-style-type: "🔹 ";
+}
+
+/* 해외 감염 현황 표 */
+
+.abroadInf {
+  width: 1080px;
+  border-collapse: collapse;
+  text-align: center;
+  line-height: 1.5;
+  border: 1px solid var(--border-color);
+  margin: 20px 10px;
+}
+
+.abroadInf thead {
+  border-collapse: collapse;
+  text-align: center;
+  line-height: 1.5;
+  border-top: 2px solid var(--border-highlight-color);
+  border-bottom: 2px solid var(--border-highlight-color);
+  background-color: var(--cell-highlight-color);
+  margin: 20px 10px;
+}
+
+.abroadInf th {
+  vertical-align: middle;
+  width: auto;
 }
