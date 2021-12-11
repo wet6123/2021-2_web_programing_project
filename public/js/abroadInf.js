@@ -21,7 +21,7 @@ var todayDate =
 
 var xhr = new XMLHttpRequest();
 var url =
-  "http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19NatInfStateJson"; /*URL*/
+  "https://cors-anywhere.herokuapp.com/http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19NatInfStateJson"; /*URL*/
 var queryParams =
   "?" +
   encodeURIComponent("serviceKey") +
