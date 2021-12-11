@@ -1,28 +1,29 @@
 /* 날짜 구하기 */
 
-var today = new Date();
+const today = new Date();
 
-var lastMonth = new Date(today.setDate(today.getDate() - 7)); //7일전 날짜
-
-var lastMonthDate =
-  lastMonth.getFullYear() +
-  "" +
-  ("00" + (lastMonth.getMonth() + 1)).slice(-2) +
-  "" +
-  ("00" + lastMonth.getDate()).slice(-2);
-var todayDate =
+const todayDate =
   today.getFullYear() +
   "" +
   ("00" + (today.getMonth() + 1)).slice(-2) +
   "" +
   ("00" + today.getDate()).slice(-2);
 
+const lastMonth = new Date(today.setDate(today.getDate() - 1)); //1일전 날짜
+
+const lastMonthDate =
+  lastMonth.getFullYear() +
+  "" +
+  ("00" + (lastMonth.getMonth() + 1)).slice(-2) +
+  "" +
+  ("00" + lastMonth.getDate()).slice(-2);
+
 /*xml 데이터 받아오기*/
 
-var xhr = new XMLHttpRequest();
-var url =
+const xhr = new XMLHttpRequest();
+const url =
   "https://cors-anywhere.herokuapp.com/http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19NatInfStateJson"; /*URL*/
-var queryParams =
+let queryParams =
   "?" +
   encodeURIComponent("serviceKey") +
   "=" +
@@ -35,7 +36,7 @@ queryParams +=
   "&" +
   encodeURIComponent("startCreateDt") +
   "=" +
-  encodeURIComponent(lastMonthDate); /*1주일 전 날짜*/
+  encodeURIComponent(lastMonthDate); /*1일 전 날짜*/
 queryParams +=
   "&" +
   encodeURIComponent("endCreateDt") +
@@ -52,16 +53,16 @@ xhr.open("GET", url + queryParams);
 xhr.send("");
 
 function nodeValfunc(xml) {
-  var xmlDoc = xml.responseXML;
+  const xmlDoc = xml.responseXML;
 
-  var areaName = xmlDoc.getElementsByTagName("areaNm");
-  var nationName = xmlDoc.getElementsByTagName("nationNm");
-  var nationDefCnt = xmlDoc.getElementsByTagName("natDefCnt");
-  var nationDeathCnt = xmlDoc.getElementsByTagName("natDeathCnt");
+  const areaName = xmlDoc.getElementsByTagName("areaNm");
+  const nationName = xmlDoc.getElementsByTagName("nationNm");
+  const nationDefCnt = xmlDoc.getElementsByTagName("natDefCnt");
+  const nationDeathCnt = xmlDoc.getElementsByTagName("natDeathCnt");
 
-  var arr = Array.from(Array(areaName.length), () => Array(4).fill(null));
-  var name = areaName[0].childNodes[0].nodeValue;
-  var num = 0;
+  const arr = Array.from(Array(areaName.length), () => Array(4).fill(null));
+  let name = areaName[0].childNodes[0].nodeValue;
+  let num = 0;
 
   for (i = 0; i < areaName.length; i++) {
     if (
@@ -82,7 +83,7 @@ function nodeValfunc(xml) {
     arr[i][4] = nationDeathCnt[i].childNodes[0].nodeValue;
   }
 
-  var txt = "";
+  let txt = "";
   for (j = areaName.length - 1; j >= 0; j--) {
     txt += "<tr>";
 

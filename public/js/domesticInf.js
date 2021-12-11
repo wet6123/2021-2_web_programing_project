@@ -2,6 +2,13 @@
 
 const today = new Date();
 
+const todayDate =
+  today.getFullYear() +
+  "" +
+  ("00" + (today.getMonth() + 1)).slice(-2) +
+  "" +
+  ("00" + today.getDate()).slice(-2);
+
 const lastMonth = new Date(today.setDate(today.getDate() - 7)); //7일전 날짜
 
 const lastMonthDate =
@@ -10,12 +17,6 @@ const lastMonthDate =
   ("00" + (lastMonth.getMonth() + 1)).slice(-2) +
   "" +
   ("00" + lastMonth.getDate()).slice(-2);
-const todayDate =
-  today.getFullYear() +
-  "" +
-  ("00" + (today.getMonth() + 1)).slice(-2) +
-  "" +
-  ("00" + today.getDate()).slice(-2);
 
 /*xml 데이터 받아오기*/
 
