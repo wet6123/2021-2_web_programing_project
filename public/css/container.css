@@ -15,6 +15,10 @@ h2 {
   margin: 20px 10px;
 }
 
+.nolist {
+  list-style-type: none;
+}
+
 /* 테이블 */
 
 table {
@@ -92,4 +96,33 @@ table ul {
 /*국내 백신 접종 현황*/
 #cntDate {
   text-align: right;
+}
+
+/*백신 접종 안내*/
+.box {
+  border: 1px solid var(--border-color);
+  margin: 8px 12px;
+  padding: 8px 12px 30px 40px;
+}
+
+button {
+  background-color: var(--border-highlight-color);
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+}
+
+button:hover {
+  background-color: var(--text-highlight-color);
 }
