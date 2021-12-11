@@ -88,3 +88,8 @@ table ul {
   vertical-align: middle;
   width: auto;
 }
+
+/*국내 백신 접종 현황*/
+#cntDate {
+  text-align: right;
+}
