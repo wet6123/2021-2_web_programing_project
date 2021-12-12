@@ -141,3 +141,8 @@ button:hover {
   margin: 0 auto;
   cursor: pointer;
 }
+
+.line {
+  background-color: var(--border-color);
+  height: 1px;
+}
