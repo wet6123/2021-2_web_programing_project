@@ -3,6 +3,7 @@
   --border-color: #ccc;
   --border-highlight-color: rgb(57, 113, 170);
   --cell-highlight-color: rgb(214, 238, 253);
+  --post-background-color: rgb(207, 207, 207);
 }
 
 hr {
@@ -145,4 +146,16 @@ button:hover {
 .line {
   background-color: var(--border-color);
   height: 1px;
+}
+
+summary {
+  cursor: pointer;
+  background-color: var(--post-background-color);
+  padding: 15px 12px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+summary:hover {
+  text-decoration: underline;
 }
