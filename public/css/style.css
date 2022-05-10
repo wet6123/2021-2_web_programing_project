@@ -2,6 +2,7 @@
 @import "menubar.css";
 @import "slide.css";
 @import "container.css";
+@import "footer.css";
 
 a {
   font-family: "Noto Sans KR", sans-serif; /*구글 폰트*/
@@ -9,6 +10,7 @@ a {
 
 body {
   width: 1080px;
+  height: calc(100vh - 75px - 200px);
   margin: 75px auto 0 auto;
 }
 
